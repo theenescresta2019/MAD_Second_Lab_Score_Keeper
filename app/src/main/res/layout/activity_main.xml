@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/tvWinningText"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:fontFamily="@font/artifika"
+            android:gravity="center"
+            android:text="Winning Point:"
+            android:textColor="#1287A5"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvWinningPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:gravity="center"
+            android:text="21"
+            android:textColor="#1287A5"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat"
+            tools:layout_editor_absoluteY="104dp" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:text="Edit"
+            app:cornerRadius="12dp"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/red_shade"
+            tools:ignore="MissingConstraints" />
+
+
+
+
+    </LinearLayout>
+
+
+<!--for team A-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/tvTeamAText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TEAM A"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1287A5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/btnTeamAMinus"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+
+            android:fontFamily="@font/alfa_slab_one"
+            app:cornerRadius="12dp"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="false"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvTeamAPoint"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#1287A5"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat"
+            tools:layout_editor_absoluteY="104dp" />
+        <Button
+            android:id="@+id/btnTeamAPlus"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@color/red_shade"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="false"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+<!--for team B-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/tvTeamBText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TEAM B"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1287A5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/btnTeamBMinus"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+
+            android:fontFamily="@font/alfa_slab_one"
+            app:cornerRadius="12dp"
+            android:text="-"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="false"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvTeamBPoint"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#1287A5"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/linearLayoutCompat"
+            tools:layout_editor_absoluteY="104dp" />
+        <Button
+            android:id="@+id/btnTeamBPlus"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@color/red_shade"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="false"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+<!--for reset button -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/artifika"
+            app:cornerRadius="12dp"
+            android:text="Reset"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="false"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
