@@ -20,26 +20,17 @@ public class MainActivity extends AppCompatActivity {
     private TextView teamBPoint;
     private TextView winningPoint;
 
-    private Button edit;
-    private Button teamAMinus;
-    private Button teamBMinus;
-    private Button teamAPlus;
-    private Button teamBPlus;
-    private Button reset;
     private int winScore;
     private int teamAScore;
     private int teamBScore;
-
-    private int tempA;
-    private int tempB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        reset = findViewById(R.id.btnReset);
-        edit = findViewById(R.id.btnEdit);
+        Button reset = findViewById(R.id.btnReset);
+        Button edit = findViewById(R.id.btnEdit);
 
 //Winning point
         winningPoint = findViewById(R.id.tvWinningPoint);
@@ -47,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
         teamAPoint = findViewById(R.id.tvTeamAPoint);
         teamBPoint = findViewById(R.id.tvTeamBPoint);
 //Team A Button
-        teamAPlus = findViewById(R.id.btnTeamAPlus);
-        teamAMinus = findViewById(R.id.btnTeamAMinus);
+        Button teamAPlus = findViewById(R.id.btnTeamAPlus);
+        Button teamAMinus = findViewById(R.id.btnTeamAMinus);
 //        team B Button
-        teamBPlus = findViewById(R.id.btnTeamBPlus);
-        teamBMinus = findViewById(R.id.btnTeamBMinus);
+        Button teamBPlus = findViewById(R.id.btnTeamBPlus);
+        Button teamBMinus = findViewById(R.id.btnTeamBMinus);
         TeamAPlusClick teamAPlusClick = new TeamAPlusClick();
         teamAPlus.setOnClickListener(teamAPlusClick);
         TeamBPlusClick teamBPlusClick = new TeamBPlusClick();
@@ -83,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(context, "TEAM B already Won the Game.", Toast.LENGTH_SHORT).show();
             }
             else {
-                tempA = teamAScore + 1;
+                int tempA = teamAScore + 1;
                 if(teamAScore == teamBScore && (winScore-teamAScore)==1){
                     teamAScore++;
                     winScore++;
@@ -117,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(context, "TEAM A already Won the Game.", Toast.LENGTH_SHORT).show();
             }
             else {
-                tempB = teamBScore + 1;
+                int tempB = teamBScore + 1;
                 if(teamBScore == teamAScore && (winScore-teamBScore)==1){
                     teamBScore++;
                     winScore++;
@@ -172,7 +163,6 @@ public class MainActivity extends AppCompatActivity {
             winningPoint.setText("" + winScore);
         }
     }
-
 
     class EditBtnClick implements View.OnClickListener {
         @SuppressLint("SetTextI18n")
